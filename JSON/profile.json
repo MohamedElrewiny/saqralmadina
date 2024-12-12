@@ -1,0 +1,63 @@
+{
+    "en": {
+        "home": "Home",
+        "book": "Book Now",
+        "about": "About",
+        "contact": "Contact Us",
+        "profile": "Profile",
+        "logout": "Logout",
+        "login":"Login",
+        "arabic":"Arabic",
+        "footing": "Copyright 2024 reserved to Saqr Al Madinah Transport Services, ",
+        "image":"Add a Picture",
+        "name": "Name:",
+        "price": "Price:",
+        "serviceDate": "Service Date:",
+        "carName": "Car Name:",
+        "phone": "Phone:",
+        "pickupPoint": "Pickup Point:",
+        "dropoffPoint": "Dropoff Point:",
+        "numberOfPeople": "Number of People:",
+        "status": "Status",
+        "chooice":"Choose an image",
+        "Name":"Name:",
+        "Email":"Email:",
+        "Phone":"Phone:"
+     
+       
+
+       
+    },
+    "ar": {
+        "home": "الرئيسية",
+        "book": "احجز الأن",
+        "about": "حول",
+        "contact": "اتصل بنا",
+        "profile": "الملف الشخصي",
+        "logout": "تسجيل الخروج",
+        "login":"تسجيل الدخول",
+        "arabic":"العربية",
+       "footing":"حقوق النشر 2024 محفوظه لدي صقر المدينة لخدمات النقل و ",
+       "image":"  إضافة صورة ",
+
+    "orderNumber": "رقم الطلب:",
+      "name": "الاسم:",
+      "price": "السعر",
+      "serviceDate": "تاريخ الخدمة:",
+      "carName": "اسم السيارة:",
+      "phone": "الهاتف:",
+      "pickupPoint": "نقطة الاقلال:",
+      "dropoffPoint": "نقطة النزول:",
+      "numberOfPeople": ":عدد الاشخاص",
+      "status": "الحالة:",
+      "chooice":"اختر صورة",
+      "Name":"الاسم:",
+      "Email":"الايميل:",
+      "Phone":"الهاتف:"
+    
+      
+
+    
+
+    }
+}

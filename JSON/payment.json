@@ -1,0 +1,37 @@
+{
+    "en": {
+        "home": "Home",
+        "book": "Book Now",
+        "about": "About",
+        "contact": "Contact Us",
+        "profile": "Profile",
+        "logout": "Logout",
+        "login":"Login",
+        "arabic":"Arabic",
+        "choice": "Choose payment method",
+        "bankk": "Bank transfer to the institution’s account at Al-Riyadh Bank IBAN:SA1420000001142458619940",
+        "arrivall": "Payment upon arrival",
+        "subBtn": "Payment confirmation",
+        "footing": "Copyright 2024 reserved to Saqr Al Madinah Transport Services, "
+
+
+    },
+
+
+    "ar": {
+        "home": "الرئيسية",
+        "book": "احجز الأن",
+        "about": "حول",
+        "contact": "اتصل بنا",
+        "profile": "الملف الشخصي",
+        "logout": "تسجيل الخروج",
+        "login":"تسجيل الدخول",
+        "arabic":"العربية",
+        "choice": "اختار طريقة الدفع ",
+        "bankk": " تحويل بنكي حساب المؤسسه في  بنك الرياض  IBAN:SA1420000001142458619940",
+        "arrivall": "الدفع عند الوصول",
+        "subBtn": "تأكيد الدفع",
+        "footing":"حقوق النشر 2024 محفوظه لدي صقر المدينة لخدمات النقل و  "
+
+    }
+}

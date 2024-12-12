@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>تسجيل الدخول</title>
+  </head>
+  <body>
+    <div class="login-page bg-main-color">
+      <div class="container border w-50 bg-white rounded login-container">
+        <form action="">
+          <div class="pb-3 px-3 m-auto">
+            <div class="heading-dark">
+              <h1
+                class="mb-4 fs-2 pb-4 fw-bold text-center main-color position-relative"
+                id="sign"
+              >
+                سجل دخولك الأن
+              </h1>
+            </div>
+            <div class="mb-3">
+              <label for="loginEmail" class="text-black fs-5 mb-2" id="mail"
+                >البريد الالكتروني :
+              </label>
+              <input
+                type="email"
+                class="form-control fs-5 bg-transparent text-black"
+                id="loginEmail"
+              />
+            </div>
+            <div class="mb-3 position-relative">
+              <label
+                for="loginPassword"
+                class="text-black fs-5 mb-2"
+                id="passwordd"
+                >كلمة المرور :
+              </label>
+              <input
+                type="password"
+                class="form-control fs-5 bg-transparent text-black mb-5"
+                id="userPasswordInput"
+              />
+              <i
+                class="fa fa-eye position-absolute d-block"
+                id="togglePassword"
+                style="top: 56.8px; left: 20px; cursor: pointer"
+              ></i>
+              <i
+                class="fa fa-eye position-absolute d-none"
+                id="togglePasswordright"
+                style="top: 56.8px; right: 20px; cursor: pointer"
+              ></i>
+            </div>
+            <p
+              class="text-black d-none text-white my-1 text-center fs-5 bg-danger"
+              id="fillMsg"
+            >
+              أدخل البيانات كاملة
+            </p>
+            <p
+              class="text-black d-none text-white my-1 text-center fs-5 bg-danger"
+              id="wrongMsg"
+            >
+              خطأ في الريد الالكتروني أو كلمة المرور
+            </p>
+            <a
+              class="btn bg-second-color text-white fs-5 w-100 mb-3 text-decoration-none fs-5"
+              id="loginBtn"
+              onclick="login()"
+              >تسجيل الدخول</a
+            >
+            <div class="d-flex justify-content-between btmDiv">
+              <p class="text-black" id="never">
+                ليس لديك أي بريد الكتروني ؟
+                <a
+                  href="register.html"
+                  class="mx-2 text-decoration-none main-color"
+                  id="registerr"
+                  >التسجيل</a
+                >
+              </p>
+              <a
+                href="./forgetPage.html"
+                class="text-black forgetPass text-decoration-none"
+                id="forget"
+                >هل نسيت كلمة مرورك ؟</a
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/authentication.js"></script>
+    <script src="js/transilations/login.js"></script>
+  </body>
+</html>

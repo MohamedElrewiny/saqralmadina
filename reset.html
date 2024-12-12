@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>إعادة تعيين كلمة المرور</title>
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="container w-75 login-container bg-main-color rounded">
+        <div class="py-3 px-3 m-auto">
+          <div class="heading">
+            <h1
+              class="mb-4 fs-2 pb-4 fw-bold text-center text-black position-relative"
+              id="changepass"
+            >
+              قم بتغيير كلمة المرور
+            </h1>
+          </div>
+          <div class="mb-3">
+            <label for="resetEmail" class="text-white mb-2 fs-5" id="mail"
+              >البريد الالكتروني :
+            </label>
+            <input
+              type="email"
+              name="resetEmail"
+              class="mb-2 fs-5 form-control"
+              id="resetEmail"
+            />
+            <label for="resetCode" class="text-white mb-2 fs-5" id="codee"
+              >الكود المرسل :
+            </label>
+            <input
+              type="tel"
+              name="resetCode"
+              class="mb-2 fs-5 form-control"
+              id="resetCode"
+            />
+            <div class="position-relative">
+              <label
+                for="resetPassword"
+                class="text-white mb-2 fs-5"
+                id="newPassword"
+                >كلمة المرور الجديدة :
+              </label>
+              <input
+                type="password"
+                name="resetPassword"
+                class="mb-2 fs-5 form-control"
+                id="userPasswordInput"
+              />
+              <i
+                class="fa fa-eye position-absolute d-block"
+                id="togglePassword"
+                style="top: 56.8px; left: 20px; cursor: pointer"
+              ></i>
+              <i
+                class="fa fa-eye position-absolute d-none"
+                id="togglePasswordright"
+                style="top: 56.8px; right: 20px; cursor: pointer"
+              ></i>
+            </div>
+
+            <p
+              class="text-white mt-3 bg-danger text-center d-none fs-5"
+              id="resetMes"
+            >
+              الكود ليس صحيحا
+            </p>
+
+            <button
+              class="btn bg-second-color text-white mt-3 px-3 fs-5 fw-bold py-2 d-block"
+              onclick="resetPassword()"
+              id="change"
+            >
+              حفظ التعديلات
+            </button>
+            <a href="login.html" class="d-none" id="loginBtn">
+              <button
+                class="btn bg-second-color text-white fs-5 my-2 px-5 fw-bold py-2"
+                id="login"
+              >
+                تسجيل الدخول
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/authentication.js"></script>
+    <script src="./js/transilations/reset.js"></script>
+  </body>
+</html>

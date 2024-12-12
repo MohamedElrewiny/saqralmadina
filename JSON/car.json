@@ -1,0 +1,88 @@
+{
+    "en": {
+        "home": "Home",
+        "book": "Book Now",
+        "about": "About",
+        "contact": "Contact Us",
+        "profile": "Profile",
+        "logout": "Logout",
+        "login":"Login",
+        "arabic":"Arabic",
+        "footing": "Copyright 2024 reserved to Saqr Al Madinah Transport Services, ",
+
+
+        "categ": "Category",
+        "typecar": "Type of Car",
+        "salary": "Price",
+        "reyal": "ٌSAR",
+
+
+        "FirstName":" Name :",
+        "fnameAlert":"Must contain at least 3 characters",
+        "lasttName":"Last Name:",
+        "lnameAlert":"Must contain at least 3 characters",
+        "Email":"Email:",
+        "phone":"Phone :",
+        "PhoneAlert":"For An Example : 966541231235",
+        "Time":"Time:",
+        "date":"Date :",
+        "pay":"Payment status:",
+        "addresss":"Address:",
+        "AddressAlert":"Enter Your Address",
+        "fplace":"Departure point :",
+        "lplacee":"Access point :",
+        "fAddressAlert":"Enter Your Address",
+        "lAddressAlert":"Enter Your Address",
+        "numPerson":"Num of Persons:",
+        "returnDate":"Return date if you book a return trip:",
+        "returnDateAlert":"Return date must be after the rental date",
+        "pricee":"Price :",
+        "type":"Type of car :",
+        "submitBtn":"Confirm Booking"
+
+    },
+    "ar": {
+        "home": "الرئيسية",
+        "book": "احجز الأن",
+        "about": "حول",
+        "contact": "اتصل بنا",
+        "profile": "الملف الشخصي",
+        "logout": "تسجيل الخروج",
+        "login":"تسجيل الدخول",
+        "arabic":"العربية",
+        "footing":"حقوق النشر 2024 محفوظه لدي صقر المدينة لخدمات النقل و  ",
+
+
+        "categ": "الفئة",
+        "typecar": "نوع السيارة",
+        "salary": "السعر",
+        "reyal": "ريال",
+
+
+        "FirstName":" الإسم : ",
+        "fnameAlert":"يجب أن يحتوي علي الاقل علي حرفين",
+        "lasttName":"الاسم الاخير",
+        "lnameAlert":"يجب أن يحتوي علي الاقل علي حرفين",
+        "Email":"البريد الالكتروني:",
+        "phone":"الهاتف :",
+        "PhoneAlert":"علي سبيل المثال : 966541231235 +",
+        "Time":"الوقت:",
+        "date":"التاريخ  :",
+        "pay":"حاله الدفع:",
+        "addresss":"العنوان:",
+        "AddressAlert":"ادخل عنوانك ",
+        "fplace":"نقطة المغادرة  :",
+        "lplacee":"نقطة الوصول  :",
+        "fAddressAlert":"ادخل عنوانك",
+        "lAddressAlert":"ادخل عنوانك",
+        "numPerson":"عدد الاشخاص:",
+        "returnDate":"تاريخ العودة في حاله الذهاب و العودة:",
+        "returnDateAlert":"يجب أن يكون تاريخ العودة بعد تاريخ الايجار ",
+        "pricee":"السعر :",
+        "type":"نوع السيارة :",
+        "submitBtn":"تأكيد الحجز"
+
+    
+
+    }
+}

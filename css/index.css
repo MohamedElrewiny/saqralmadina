@@ -1,0 +1,717 @@
+/* Start Global Rules */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+:root{
+  --transition: 0.4s;
+  --main-color: #28ABE1;
+  --second-color: #0066B2;
+  --last-color: #c1c5c9;
+  --dark-color: #171304;
+}
+.main-color{
+  color: var(--main-color);
+}
+.bg-main-color{
+  background-color: var(--main-color);
+}
+.second-color{
+  color: var(--second-color);
+}
+.bg-second-color{
+  background-color: var(--second-color);
+}
+.second-color{
+  color: var(--second-color);
+}
+.bg-second-color{
+  background-color: var(--second-color);
+}
+.last-color{
+  color: var(--last-color);
+}
+.bg-last-color{
+  background-color: var(--last-color);
+}
+.dark-color{
+  color: var(--dark-color);
+}
+.bg-dark-color{
+  background-color: var(--dark-color);
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.8;
+  font-family: "Cairo", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  transition: var(--transition);
+  color: black;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0 0 10px 0;
+  margin: 0;
+}
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+p {
+  margin: 0px;
+  font-size: 15px;
+}
+button {
+  border: 0;
+  margin: 0;
+  padding: 20px 30px;
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+}
+input:focus {
+  outline: none !important;
+}
+/* End Global Rules */
+/* Start Up BTN */
+#backToTopBtn {
+  display: none; /* Hide the button by default */
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+  z-index: 99;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: var(--second-color);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  transition: var(--transition);
+  opacity: 0.6;
+  border: 2px solid var(--last-color);
+}
+#backToTopBtn:hover {
+  opacity: 1;
+}
+/* Start Up BTN */
+/* Start whatsapp-icon */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 120px;
+  left: 10px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  padding: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  border: 2px solid var(--last-color);
+}
+.whatsapp-icon i{
+  font-size: 30px;
+  color: white;
+  transition: var(--transition);
+}
+.whatsapp-icon:hover{
+  opacity: 1;
+}
+/* End whatsapp-icon */
+/* Start Heading */
+.heading h1::before,.heading-dark h1::before{
+  content: "";
+  position: absolute;
+  border-style: solid;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 70px;
+  margin: 0 auto;
+}
+.heading h1::before{
+  border-color: white;
+}
+.heading-dark h1::before{
+  border-color: var(--main-color);
+}
+
+/* End Heading */
+/* Start BTN */
+.btn-basic,.btn-basicc{
+  color: white;
+  background-color: var(--second-color);
+  transition: var(--transition);
+  padding: 10px 24px;
+  font-size: 18px;
+  margin: 7px 0px;
+  border-radius: 24px;
+}
+.btn-basic:hover{
+  color: white;
+}
+/* End BTN */
+
+
+
+/* Start Header */
+@media(max-width: 767px){
+  .header-home{
+    height: fit-content;
+  }
+}
+#header{
+  transition: var(--transition) !important;
+}
+.navbar .navbar-collapse
+.navbar .navbar-brand img{
+  width: 150px;
+}
+.navbar-nav .nav-link{
+  color: var(--main-color);
+  transition: var(--transition);
+  position: relative;
+  padding: 5px 0px !important;
+}
+.nav-item i, .nav-item i+span{
+  transition: var(--transition);
+}
+.nav-item:hover i,.nav-item:hover i+span{
+  color: var(--second-color);
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover{
+  color: var(--second-color);
+}
+.navbar-nav .nav-link::before, .navbar-nav .nav-link.active::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--second-color);
+  transition: var(--transition);
+}
+.navbar-nav .nav-link::before{
+  width: 0%;
+}
+.navbar-nav .nav-link.active::before{
+  width: 100%;
+}
+.navbar-nav .nav-link:hover::before{
+  width: 100%;
+}
+.language-select {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.language-select:hover{
+  color: var(--second-color) !important;
+}
+.language-option {
+  display: flex;
+  align-items: center;
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+.logoutDiv{
+  cursor: pointer;
+}
+@media(max-width: 992px){
+  .navbar-nav .nav-link:hover::before, .navbar-nav .nav-link.active::before{
+    width: 0% !important;
+  }
+  .left-header{
+    justify-content: center;
+  }
+  .left-header ul{
+    /* width: 100%; */
+    justify-content: center !important;
+    padding: 10px 0;
+  }
+  .navbar .navbar-collapse{
+    margin: 0 !important;
+  }
+}
+@media (min-width: 767px) and (max-width: 1215px){
+
+  .left-header{
+    justify-content: center;
+  }
+  .left-header ul{
+    width: 100%;
+    justify-content: end !important;
+    padding: 10px 0 0;
+  }
+}
+@media(max-width:440px){
+  .left-header  ul span{
+    font-size: 14px !important;
+  }
+  .left-header  ul i{
+    font-size: 14px;
+  }
+  .language-select{
+    font-size: 14px;
+  }
+}
+/* End Header */
+
+
+/* Start Landing */
+.landing .data{
+  width: 60%;
+}
+.landing .data h1{
+  line-height: 1.3;
+}
+.landing .data p{
+  font-size: 18px;
+}
+.landing .data a button{
+  width: 40%;
+}
+.landing .image{
+  width: 40%;
+}
+.landing .image .carousel-inner .carousel-item{
+  height: 450px !important;
+  width: 100% !important;
+}
+.landing .image .carousel-inner .carousel-item img{
+  height: 100% !important;
+}
+
+@media (max-width: 767px){
+  .landing .info{
+    flex-direction: column-reverse;
+  }
+  .landing .data,.landing .image{
+    width: 100%;
+  }
+}
+/* End Landing */
+
+
+/* Start Book now */
+#bookingBtn{
+  transition: transform 1s,opacity 1s !important;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.data:hover #bookingBtn{
+  opacity: 1;
+  transform: translateY(0%);
+}
+.booking .container .places button{
+  background-color: #eee;
+  border:1px solid var(--second-color) ;
+  color: var(--main-color);
+  transition: all .4s;
+}
+.booking .container .places button:hover {
+  background-color:var(--main-color);
+  color: white !important;
+}
+.booking .container .places button a{
+  transition: all 0.4s;
+}
+
+.booking .container .activeButton{
+  background-color: var(--main-color) !important;
+  color: white !important;
+}
+.booking .card {
+  background-color: #eee;
+  transition: var(--transition);
+}
+.booking .card:hover{
+  background-color: #dcdcdc;
+}
+.booking .card .text .price button{
+  background-color: var(--second-color);
+  transition: var(--transition);
+}
+.booking .card .text .price button a{
+  color: #fff !important;
+}
+@media(max-width:767px){
+  .booking .container .places button a{
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+/* End Book now */
+
+
+/* Start Timeline */
+.timeline {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #fff; 
+}
+.timeline .timeline-content {
+  position: relative;
+  overflow: hidden;
+}
+.timeline .timeline-content:before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 50%;
+  margin-left: -1px;
+  top: 0;
+}
+.timeline .timeline-content .left,
+.timeline .timeline-content .right {
+  width: calc(50% - 28px);
+  margin-bottom: 40px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .timeline .timeline-content .left, 
+  .timeline .timeline-content .right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .timeline .timeline-content .left:before, 
+  .timeline .timeline-content .right:before {
+    display: none;
+  }
+  .timeline .timeline-content .left .content:before,
+  .timeline .timeline-content .right .content:before {
+    display: none;
+  }
+}
+.timeline .timeline-content .left {
+  float: left;
+}
+.timeline .timeline-content .left:before {
+  right: -35px;
+}
+.timeline .timeline-content .right {
+  float: right;
+}
+.timeline .timeline-content .right:before {
+  left: -35px;
+}
+.timeline .timeline-content .left:before,
+.timeline .timeline-content .right:before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-color: #FFF;
+  border: 3px solid var(--main-color);
+  position: absolute;
+  border-radius: 50%;
+  top: 20px;
+}
+.timeline .timeline-content .content {
+  padding: 20px;
+  background-color: #e2e2e2;
+  border-radius: 7px;
+}
+.timeline .timeline-content .content h3 {
+  font-weight: bold;
+  color: var(--main-color);
+  margin: 0 0 10px;
+}
+.timeline .timeline-content .content p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+.clearfix {
+  clear: both;
+}
+.timeline .timeline-content .left .content:before {
+  content: '';
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent #e2e2e2;
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -19px;
+  top: 20px;
+}
+.timeline .timeline-content .right .content:before {
+  content: '';
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent #e2e2e2 transparent transparent ;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: -19px;
+  top: 20px;
+}
+/* End Timeline */
+
+
+/* Start Contact Us */
+
+.contact .container .box .icon{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.contact form textarea{
+  resize: none;
+}
+@media(max-width: 992px){
+  .contact .container .box .icon i,
+  .contact .container .box p,
+  .contact .container .box a{
+    font-size: 16px !important;
+  }
+}
+@media(max-width: 767px){
+  .contact .container{
+    width: 100% !important;
+  }
+  .contact .container .box .icon i,
+  .contact .container .box p,
+  .contact .container .box a{
+    font-size: 14px !important;
+  }
+  .contact .container form{
+    flex-direction: column;
+    gap: 0px !important;
+  }
+  .contact .container form .left,
+  .contact .container form .right{
+    width: 100% !important;
+  }
+}
+@media(max-width: 610px){
+  .contact .container .info
+  {
+    flex-direction: column;
+  }
+
+}
+/* End Contact Us */
+
+
+/* Start Footer */
+@media(max-width: 767px){
+  .copyright .Footer{
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+}
+/* End Footer */
+
+
+/* Start bookingDetails */
+.bookingDetails .container .infoo .demo{
+  color: var(--main-color);
+  font-size: 15px;
+  font-weight: 700;
+}
+.bookingDetails .container .infoo .one{
+  font-weight: bold;
+  color: var(--main-color);
+}
+.boohingDetails .container  .infoo  p,span{
+  margin: 10px 0;
+}
+.bookingDetails .details{
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+}
+.bookingDetails .details button{
+  margin: auto;
+  display: block;
+  border: 1px solid var(--second-color);
+  margin-top: 20px;
+  width: fit-content;
+}
+.bookingDetails .details button a{
+  color: white;
+  font-weight: bold;
+}
+.bookingDetails .details button:hover{
+  background-color: var(--second-color);
+}
+.bookingDetails .details button:hover a{
+  color: var(--main-color);
+}
+.bookingDetails .form-container {
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+}
+.bookingDetails .form-container.show {
+  opacity: 1; 
+  transform: translateY(0); 
+}
+.success-alert{
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 30px;
+  text-align: center;
+}
+@media(max-width: 680px){
+  .success-alert{
+    width: 80% !important;
+  }
+  .bookingDetails .details{
+    border-radius: 0 !important;
+  }
+}
+.is-invalid {
+  border-color: red;
+}
+.is-valid {
+  border-color: green;
+}
+.valid-feedback {
+  color: green;
+  display: none;
+}
+.invalid-feedback {
+  color: red;
+  display: none;
+}
+/* End bookingDetails */
+
+
+
+/* Start Payment */
+.payment{
+  background-image: url("../Assets/payment/online-payments_mode-banner.webp");
+  background-size: cover;
+
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #0000008b;
+}
+@media(max-width:767px){
+  .bankData .data{
+    margin-bottom: 20px;
+  }
+  .bankData .data p{
+    margin-bottom: 5px;
+  }
+  .bankData .row{
+    margin-bottom: 0 !important;
+  }
+  .bankData .image{
+    padding: 0 !important;
+  }
+}
+/* Start Arrival */
+@media(max-width: 992px){
+  .bankData .image{
+    display: none;
+  }
+  .bankData .data{
+    width: 100%;
+  }
+}
+@media(max-width: 767px){
+  .bankData .image{
+    display: block;
+  }
+
+}
+/* End Arrival */
+
+/* End Payment */
+
+
+/* Start Profile */
+
+.profile .card {
+	color:#fff;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #0066B2, #33a0d6);
+  box-shadow: -3px -3px 10px 0px #28ABE1, 3px 3px 10px 0px #28ABE1;
+  border: none;
+}
+.profile .image img{
+  margin-bottom: 7px ;
+  height: 120px !important;
+  width: 150px !important;
+}
+@media(max-width:767px){
+  .profile .card{
+    width: 100%;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .profile .image .btn-basic{
+    width: fit-content !important;
+
+  }
+  .status{
+    padding: 10px 0 !important;
+  }
+  .dataRent{
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+  .dataRent .one{
+    margin-bottom: 0 !important;
+  }
+  .dataRent .one , .dataRent .two{
+    width: 100% !important;
+    padding:0 5px !important;
+  }
+ 
+}
+@media(max-width:600px){
+  .profile{
+    width: 100% !important;
+  }
+  .profile .data p{
+    font-size: 18px !important;
+  }
+}
+.status{
+  width: 25% !important;
+  border-radius: 6px;
+}
+/* End Profile */
+
+
+

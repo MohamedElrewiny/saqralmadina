@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      new WOW().init();
+    </script>
+    <title>شركة صقر المدينة لخدمات النقل</title>
+  </head>
+  <body>
+    <a href="https://wa.me/+966565545424" target="_blank" class="whatsapp-icon">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button id="backToTopBtn" onclick="scrollToTop()">
+      <i class="fa-solid fa-up-long"></i>
+    </button>
+    <!-- Start Header -->
+    <div class="header-home">
+      <header class="d-flex justify-content-between" id="header">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg flex-fill p-0">
+            <div class="container-fluid p-0">
+              <a class="navbar-brand m-0" href="index.html">
+                <img
+                  src="./Assets/logo/Logo.png"
+                  alt="Logo"
+                  style="width: 120px"
+                />
+              </a>
+              <button
+                class="navbar-toggler bg-white py-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon m-0"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse mx-5"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item mx-2">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="index.html"
+                      id="home"
+                      >الرئيسية</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#booking" id="book">احجز الأن</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#about_us" id="about">حول</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#Contact" id="contact"
+                      >اتصل بنا</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="left-header d-flex align-items-center">
+                <div class="container-fluid">
+                  <ul
+                    class="mb-2 mb-lg-0 d-flex align-items-center justify-content-end"
+                  >
+                    <li class="nav-item mx-2">
+                      <a href="profile.html" class="main-color nav-link">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="me-1" id="profile">الملف الشخصي</span>
+                      </a>
+                    </li>
+                    <li class="nav-item mx-2 d-none" id="logoutList">
+                      <a
+                        class="px-0 logoutDiv nav-link main-color"
+                        onclick="logOut()"
+                      >
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="me-1" id="logout">تسجيل الخروج</span>
+                      </a>
+                    </li>
+                    <li class="nav-item mx-2 d-block" id="loginList">
+                      <a
+                        class="px-0 logoutDiv nav-link main-color"
+                        href="login.html"
+                      >
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="me-1" id="login">تسجيل الدخول</span>
+                      </a>
+                    </li>
+                    <li class="language">
+                      <select class="language-select border-0 main-color">
+                        <option class="language-option" value="ar" id="arabic">
+                          العربية
+                        </option>
+                        <option class="language-option" value="en" id="English">
+                          English
+                        </option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Start Landing -->
+      <div class="landing my-4 overflow-hidden">
+        <div class="container">
+          <div
+            class="info d-flex justify-content-between gap-3 align-items-center"
+          >
+            <div
+              class="data wow animate__animated animate__fadeInRight"
+              data-wow-duration="1s"
+            >
+              <span class="fs-3 second-color fw-bold" id="welcomee"
+                >مرحبا بك في</span
+              >
+              <h1 class="fw-bold fs-2 my-4" id="data1">
+                أفضل مقدمي خدمات النقل في المملكة العريبة السعودية لنقل الضيوف
+                الي وجهتهم بكل احترافية
+              </h1>
+              <p class="mb-3" id="data2">
+                مزود خدمة النقل المتكاملة الخاص بك مع أنواع مختلفة من المركبات
+                وفقًا لاحتياجاتك.
+              </p>
+              <a href="#booking" class="text-white">
+                <button class="btn-basic" id="booknow">احجز الأن</button>
+              </a>
+            </div>
+            <div
+              class="image wow animate__animated animate__fadeInLeft"
+              data-wow-duration="1s"
+            >
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                  <div class="carousel-item active">
+                    <img src="./Assets/data/p5.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./Assets/data/p1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item ">
+                    <img src="./Assets/data/p2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./Assets/data/p3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./Assets/data/p4.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item ">
+                    <img src="./Assets/data/p6.jpg" class="d-block w-100 " alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Landing -->
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Booking -->
+    <div class="booking bg-second-color py-4" id="booking">
+      <div class="heading">
+        <h1
+          class="text-center fw-bold text-white pb-4 position-relative fs-2"
+          id="headding"
+        >
+          احجز الأن
+        </h1>
+      </div>
+      <div class="container" id="card-section">
+        <p class="text-center text-white fs-5" id="choice">
+          من فضلك اختار المكان الذي تريد ان تذهب الية:
+        </p>
+        <div
+          class="places d-flex align-content-center justify-content-center my-4 gap-2 flex-wrap"
+        ></div>
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+          id="data-content-car"
+        ></div>
+      </div>
+    </div>
+    <!-- End Booking -->
+
+    <!-- Start Timeline -->
+    <div class="timeline about" id="about_us">
+      <div class="heading-dark">
+        <h1
+          class="text-center fw-bold main-color pb-4 position-relative fs-2"
+          id="About"
+        >
+          حول
+        </h1>
+      </div>
+      <div class="container">
+        <div class="timeline-content">
+          <div
+            class="left wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="content">
+              <h3 id="who">من نحن ؟</h3>
+              <p class="fs-5" id="details">
+                نحن شركة متخصصة في النقل بالمملكة العربية السعودية عبر أسطول
+                حديث ومتميز من السيارات تقوم شركة صقر المدينة لنقل الضيوف إلى
+                وجهتهم بكل احترافية.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div
+            class="right wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.4s"
+          >
+            <div class="content">
+              <h3 id="details1">رؤيتنا :</h3>
+              <p class="fs-5" id="details2">
+                الوصول الى التميز والريادة في مجال النقل وتوفير حلول متعددة
+                تتوافق مع رؤية المملكة العربية السعودية في تطوير منظومة
+                خدمة نقل المسافرين.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div
+            class="left wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.6s"
+          >
+            <div class="content">
+              <h3 id="goals">أهدافنا :</h3>
+              <ul class="fs-5">
+                <li id="goal1">تقديم ارقى الخدمات في نقل المسافرين.</li>
+                <li id="goal2">
+                  المساهمة بشكل فعال بالمشاركة في النقل السياحي.
+                </li>
+                <li id="goal3">تقديم خدمات النقل بما يتوافق مع رؤية 2030.</li>
+                <li id="goal4">
+                  المساهمة في الإرتقاء بضيوف الرحمن ونيل الشرف في ذلك.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <!-- End Timeline -->
+
+    <!-- Start Contact Us -->
+    <div class="contact bg-second-color py-4" id="Contact">
+      <div class="heading">
+        <h1
+          class="text-center fw-bold text-white pb-4 position-relative fs-2"
+          id="contactt"
+        >
+          اتصل بنا
+        </h1>
+      </div>
+      <div class="container w-75 mt-5">
+        <div class="info d-flex justify-content-between gap-3">
+          <div class="box mb-3 text-center">
+            <div class="icon mb-2">
+              <i class="fa-solid fa-location-dot fs-5 text-white"></i>
+            </div>
+            <p class="fs-5 text-white" id="address">المملكة العربية السعودية</p>
+          </div>
+          <div class="box mb-3 text-center">
+            <div class="icon mb-2">
+              <i class="fa-solid fa-envelope fs-5 text-white"></i>
+            </div>
+            <a
+              href="mailto: Saqr.almadina.rental@gmail.com"
+              class="text-white fs-5"
+              id=""
+              >info@saqralmadina.com
+            </a>
+          </div>
+          <div class="text-center box">
+            <div class="icon mb-2">
+              <i class="fa-solid fa-phone fs-5 text-white"></i>
+            </div>
+            <p class="fs-5 text-white">966565545424+</p>
+            <p class="fs-5 text-white">966565545423+</p>
+          </div>
+        </div>
+        <form
+          class="form-control mt-4 py-4 d-flex gap-2 wow animate__animated animate__fadeInUp"
+          id="register-form"
+        >
+          <div class="left w-50">
+            <label for="Name" id="name">الإسم :</label>
+            <input
+              type="text"
+              class="form-control py-2 fw-bold mt-2 mb-3"
+              id="Name"
+              name="Name"
+            />
+
+            <label for="Email" id="emaill">البريد الاإلكتروني :</label>
+            <input
+              type="email"
+              class="form-control py-2 fw-bold mt-2 mb-3"
+              id="Email"
+              name="Email"
+            />
+          </div>
+          <div class="right w-50">
+            <label for="Message" id="messagee">الرسالة :</label>
+            <textarea
+              type="text"
+              class="form-control fw-bold py-2 mt-2 mb-3"
+              cols="15"
+              rows="6"
+              id="Message"
+              name="Message"
+            ></textarea>
+            <button
+              type="button"
+              class="btn-basic form-control w-50 m-auto"
+              onclick="MessageUser()"
+            >
+              <a id="sub">ارسال</a>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End Contact Us -->
+
+    <!-- Start Footer -->
+    <div class="copyright bg-white py-2">
+      <div
+        class="Footer text-center p-3 d-flex justify-content-center gap-5 align-items-center"
+      >
+        <a class="navbar-brand m-0" href="index.html">
+          <img src="./Assets/logo/Logo.png" alt="Logo" style="width: 120px" />
+        </a>
+        <div class="d-flex flex-column">
+          <div class="social">
+            <a
+              class="mx-2 main-color fs-3"
+              href="https://www.facebook.com/profile.php?id=61562200177164&mibextid=ZbWKwL"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              class="mx-2 main-color fs-3"
+              href="https://www.instagram.com/saqr.almadina?igsh=MWV2emRtcm1wNHRkcw=="
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              class="mx-2 main-color fs-3"
+              href="https://x.com/SaqrAlmadina234?t=9Vs1iMIE2YG48rEUopqpBQ&s=09"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="mailto: info@saqralmadina.com" class="mx-2 main-color fs-3"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </div>
+          <p class="fs-6 second-color fw-bold">
+            <span id="footing">&copy;  حقوق النشر 2024 محفوظه لدي صقر المدينة لخدمات النقل و </span>
+            <a href="https://wa.me/+966548720537" class="fw-bold second-color"
+              >IT.RENADMADI</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer -->
+    <script src="js/transilations/index.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main1.js"></script>
+    <script src="js/authentication.js"></script>
+  </body>
+</html>

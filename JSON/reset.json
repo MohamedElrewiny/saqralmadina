@@ -1,0 +1,22 @@
+{
+    "en": {
+        "changepass": "Change your password",
+        "mail": "Email",
+        "codee": "The Sent Code",
+        "newPassword": "New Password",
+        "resetMes": "The code is not correct",
+        "change": "Save changes",
+        "login": "Login"
+    },
+    "ar": {
+        "changepass": "قم بتغيير كلمة المرور",
+        "mail": "البريد الإلكتروني",
+        "codee": "الكود المرسل",
+        "newPassword": "كلمة المرور الجديدة ",
+        "resetMes": "الكود ليس صحيحا",
+        "change": "حفظ التعديلات",
+        "login": "تسجيل الدخول"
+
+
+    }
+}

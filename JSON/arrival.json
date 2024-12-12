@@ -1,0 +1,53 @@
+{
+    "en": {
+        "home": "Home",
+        "book": "Book Now",
+        "about": "About",
+        "contact": "Contact Us",
+        "profile": "Profile",
+        "logout": "Logout",
+        "login":"Login",
+        "arabic":"Arabic",
+        "footing": "Copyright 2024 reserved to Saqr Al Madinah Transport Services, ",
+
+
+
+
+        "complete": "Complete your Order",
+        "thanks": "Thank you for completing your request.",
+        "number": "order number",
+        "type": "Car type",
+        "start": "Departure point",
+        "end": "Access point",
+        "price": "The price",
+        "backhome": "Back to Home Page"
+
+    },
+
+
+    "ar": {
+        "home": "الرئيسية",
+        "book": "احجز الأن",
+        "about": "حول",
+        "contact": "اتصل بنا",
+        "profile": "الملف الشخصي",
+        "logout": "تسجيل الخروج",
+        "login":"تسجيل الدخول",
+        "arabic":"العربية",
+        "footing":"  حقوق النشر 2024 محفوظه لدي صقر المدينة لخدمات النقل و  ",
+
+
+
+
+        "complete": " استكمال  طلبك ",
+        "thanks": "شكرا لاستكمال  طلبك",
+        "number": " رقم الطلب",
+        "type": "نوع السيارة ",
+        "start": "نقطة المغادرة ",
+        "end": "نقطة الوصول ",
+        "price": "السعر",
+        "backhome": "الرجوع للصفحة الرئيسية"
+        
+
+    }
+}

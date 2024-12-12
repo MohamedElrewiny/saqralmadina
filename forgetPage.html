@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>نسيت كلمة المرور</title>
+  </head>
+  <body>
+    <div class="login-page forget-contaier">
+      <div class="container bg-main-color w-50 rounded">
+        <div class="py-2 px-3 m-auto">
+          <div class="mb-3">
+            <label for="forgetemail" class="text-white fs-5 mb-2" id="mail"
+              >البريد الالكتروني :
+            </label>
+            <input
+              type="email"
+              name="forgetemail"
+              class="form-control fs-5"
+              id="forgetEmail"
+            />
+            <button
+              class="btn bg-second-color text-white mt-3 px-5 fs-5 fw-bold py-2"
+              onclick="forgetPassword()"
+              id="subbtn"
+            >
+              ارسال
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/authentication.js"></script>
+    <script src="./js/transilations/forgetPage.js"></script>
+  </body>
+</html>

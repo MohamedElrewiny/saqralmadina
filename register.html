@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>تسجيل البيانات</title>
+  </head>
+  <body>
+    <div class="register my-3">
+      <div class="container">
+        <div class="cover w-50 m-auto">
+          <img src="./Assets/data/photo2.jpg" alt="" class="w-100" />
+        </div>
+        <form action="">
+          <div class="w-75 py-5 px-3 m-auto regester-data">
+            <div class="heading-dark">
+              <h1
+                class="mb-4 fs-2 pb-4 fw-bold text-center main-color position-relative"
+                id="title"
+              >
+                سجل بياناتك الأن
+              </h1>
+            </div>
+            <div class="row">
+              <div class="mb-3 col-md-6">
+                <label for="usernameInput" class="main-color mb-2" id="namee"
+                  >الاسم :
+                </label>
+                <input
+                  type="text"
+                  class="form-control bg-transparent main-color"
+                  id="usernameInput"
+                />
+                <p id="usernameAlert" class="fs-5 d-none text-danger">
+                  يجب ان يحتوي علي حرفين علي الأقل
+                </p>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="userEmailInput" class="main-color mb-2" id="emaile"
+                  >البريد الالكتروني :
+                </label>
+                <input
+                  type="email"
+                  class="form-control bg-transparent main-color"
+                  id="userEmailInput"
+                />
+                <p id="userEmailAlert" class="fs-5 d-none text-danger">
+                  name@example.com
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col-md-6 position-relative">
+                <label for="userPasswordInput" class="main-color mb-2" id="pass"
+                  >كلمة المرور :
+                </label>
+                <input
+                  type="password"
+                  class="form-control bg-transparent main-color mb-3 col-md-6"
+                  id="userPasswordInput"
+                />
+                <i
+                  class="fa fa-eye position-absolute d-block"
+                  id="togglePassword"
+                  style="top: 48px; left: 20px; cursor: pointer"
+                ></i>
+                <i
+                  class="fa fa-eye position-absolute d-none"
+                  id="togglePasswordright"
+                  style="top: 48px; right: 20px; cursor: pointer"
+                ></i>
+
+                <p id="userPasswordAlert" class="fs-5 d-none text-danger m-0">
+                  يجب ان يحتوي علي 8 حروف او ارقام علي الأقل
+                </p>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="userAgeInput" class="main-color mb-2" id="agee"
+                  >العمر :
+                </label>
+                <input
+                  type="number"
+                  class="form-control bg-transparent main-color"
+                  id="userAgeInput"
+                />
+                <p id="userAgeAlert" class="fs-5 d-none text-danger">
+                  ادخل عمرك من 15 ل 90 عام
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col-md-6">
+                <label for="userPhoneInput" class="main-color mb-2" id="phonee"
+                  >الجوال :
+                </label>
+                <input
+                  type="tel"
+                  class="form-control bg-transparent main-color"
+                  id="userPhoneInput"
+                />
+                <p id="userPhoneAlert" class="fs-5 d-none text-danger">
+                  علي سبيل المثال : 966541231235+
+                </p>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label
+                  for="userAddressInput"
+                  class="main-color mb-2"
+                  id="addressss"
+                  >العنوان :
+                </label>
+                <input
+                  type="text"
+                  class="form-control bg-transparent main-color"
+                  id="userAddressInput"
+                />
+                <p id="userAddressAlert" class="fs-5 d-none text-danger">
+                  ادخل عنوانك
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col-md-6">
+                <label for="gender" class="main-color mb-2" id="genderr"
+                  >الجنس :
+                </label>
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="Male"
+                  checked
+                />
+                <label for="male" class="main-color" id="maleLabel">ذكر</label>
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="Female"
+                  class="me-3"
+                />
+                <label for="female" class="main-color" id="femaleLabel"
+                  >أنثى</label
+                ><br />
+              </div>
+            </div>
+
+            <p
+              class="text-white d-none fs-5 mb-2 text-center bg-success"
+              id="confirmMsg"
+            >
+              تم التسجيل بنجاح
+            </p>
+            <p
+              class="text-white d-none fs-5 mb-2 bg-danger text-center"
+              id="accountExistMsg"
+            >
+              هذا البريد الالكتروني موجود بالفعل , ادخل بريد اخر
+            </p>
+            <p
+              class="text-white fs-5 d-none mb-2 bg-danger text-center"
+              id="tryAgainMsg"
+            >
+              فشل التسجيل , حاول مرة اخري
+            </p>
+            <a
+              id="signupBtn"
+              onclick="signUp()"
+              class="btn bg-second-color d-block text-white w-100 mb-3 text-decoration-none fs-5"
+              >التسجيل</a
+            >
+            <!-- <a href="login.html" class="d-none fs-5 mb-2 btn btn-success text-white w-100 m-auto" id="signin">تسجيل الدخول</a> -->
+            <p class="text-dark mb-2 fs-6 d-block" id="haveEmailLabel">
+              هل لديك بريد مسجل من قبل؟
+              <a
+                href="login.html"
+                class="mx-2 text-decoration-none fs-6 main-color"
+                id="loginLink"
+              >
+                تسجيل الدخول</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/authentication.js"></script>
+    <script src="js/transilations//register.js"></script>
+  </body>
+</html>

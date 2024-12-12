@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <title>الدفع عند الوصول</title>
+  </head>
+  <body>
+    <a href="https://wa.me/+966565545424" target="_blank" class="whatsapp-icon">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button id="backToTopBtn" onclick="scrollToTop()">
+      <i class="fa-solid fa-up-long"></i>
+    </button>
+    <!-- Start Header -->
+    <div>
+      <header class="d-flex justify-content-between" id="header">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg flex-fill p-0">
+            <div class="container-fluid p-0">
+              <a class="navbar-brand m-0" href="index.html">
+                <img
+                  src="./Assets/logo/Logo.png"
+                  alt="Logo"
+                  style="width: 120px"
+                />
+              </a>
+              <button
+                class="navbar-toggler bg-white py-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon m-0"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse mx-5"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item mx-2">
+                    <a
+                      class="nav-link"
+                      aria-current="page"
+                      href="index.html"
+                      id="home"
+                      >الرئيسية</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="index.html#booking" id="book"
+                      >احجز الأن</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="index.html#about_us" id="about"
+                      >حول</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="index.html#Contact" id="contact"
+                      >اتصل بنا</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="left-header d-flex align-items-center">
+                <div class="container-fluid">
+                  <ul
+                    class="mb-2 mb-lg-0 d-flex align-items-center justify-content-end"
+                  >
+                    <li class="nav-item mx-2">
+                      <a href="profile.html" class="main-color nav-link">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="me-1" id="profile">الملف الشخصي</span>
+                      </a>
+                    </li>
+                    <li class="nav-item mx-2 d-none" id="logoutList">
+                      <a
+                        class="px-0 logoutDiv nav-link main-color"
+                        onclick="logOut()"
+                      >
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="me-1" id="logout">تسجيل الخروج</span>
+                      </a>
+                    </li>
+                    <li class="nav-item mx-2 d-block" id="loginList">
+                      <a
+                        class="px-0 logoutDiv nav-link main-color"
+                        href="login.html"
+                      >
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="me-1" id="login">تسجيل الدخول</span>
+                      </a>
+                    </li>
+                    <li class="language">
+                      <select class="language-select border-0 main-color">
+                        <option class="language-option" value="ar" id="arabic">
+                          العربية
+                        </option>
+                        <option class="language-option" value="en">
+                          English
+                        </option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start arrival Payment -->
+    <div class="py-5">
+      <div class="heading-dark">
+        <h1
+          class="text-center fw-bold pb-4 position-relative fs-2 main-color"
+          id="complete"
+        >
+          استكمال طلبك
+        </h1>
+      </div>
+      <div class="container overflow-hidden">
+        <div class="bankData row mt-3" id="bankData">
+          <div
+            class="data col-md-6 p-3 wow animate__animated animate__fadeInRight"
+            style="background-color: #eee"
+            id="data1"
+          >
+            <div
+              class="spinner-border m-5 d-block m-auto d-none"
+              role="status"
+              id="loading"
+            ></div>
+          </div>
+          <div class="image col-md-6 wow animate__animated animate__fadeInLeft">
+            <img src="./Assets/data/photo2.jpg" alt="" class="w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End  arrival Payment -->
+
+    <!-- Start Footer -->
+    <div class="copyright bg-white py-2">
+      <div
+        class="Footer text-center p-3 d-flex justify-content-center gap-5 align-items-center"
+      >
+        <a class="navbar-brand m-0" href="index.html">
+          <img src="./Assets/logo/Logo.png" alt="Logo" style="width: 120px" />
+        </a>
+        <div class="d-flex flex-column">
+          <div class="social">
+            <a
+              class="mx-2 main-color fs-3"
+              href="https://www.facebook.com/profile.php?id=61562200177164&mibextid=ZbWKwL"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              class="mx-2 main-color fs-3"
+              href="https://www.instagram.com/saqr.almadina?igsh=MWV2emRtcm1wNHRkcw=="
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              class="mx-2 main-color fs-3"
+              href="https://x.com/SaqrAlmadina234?t=9Vs1iMIE2YG48rEUopqpBQ&s=09"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="mailto: info@saqralmadina.com" class="mx-2 main-color fs-3"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </div>
+          <p class="fs-6 second-color fw-bold">
+            <span id="footing">حقوق النشر محفوظه لدي</span>
+            <a href="https://wa.me/+966548720537" class="fw-bold second-color"
+              >IT.RENADMADI</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/authentication.js"></script>
+    <script src="js/payment.js"></script>
+    <script src="js/transilations/arrival.js"></script>
+    <script src="js/main1.js"></script>
+  </body>
+</html>

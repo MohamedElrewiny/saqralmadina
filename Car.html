@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>تأكيد حجز السيارة</title>
+  </head>
+  <body>
+    <a href="https://wa.me/+966565545424" target="_blank" class="whatsapp-icon">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button id="backToTopBtn" onclick="scrollToTop()">
+      <i class="fa-solid fa-up-long"></i>
+    </button>
+    <!-- Start Header -->
+    <header class="d-flex justify-content-between" id="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg flex-fill p-0">
+          <div class="container-fluid p-0">
+            <a class="navbar-brand m-0" href="index.html">
+              <img
+                src="./Assets/logo/Logo.png"
+                alt="Logo"
+                style="width: 120px"
+              />
+            </a>
+            <button
+              class="navbar-toggler bg-white py-2"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon m-0"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse mx-5"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="index.html"
+                    id="home"
+                    >الرئيسية</a
+                  >
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="index.html#booking" id="book"
+                    >احجز الأن</a
+                  >
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="index.html#about_us" id="about"
+                    >حول</a
+                  >
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="index.html#Contact" id="contact"
+                    >اتصل بنا</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="left-header d-flex align-items-center">
+              <div class="container-fluid">
+                <ul
+                  class="mb-2 mb-lg-0 d-flex align-items-center justify-content-end"
+                >
+                  <li class="nav-item mx-2">
+                    <a href="profile.html" class="main-color nav-link">
+                      <i class="fa-solid fa-user"></i>
+                      <span class="me-1" id="profile">الملف الشخصي</span>
+                    </a>
+                  </li>
+                  <li class="nav-item mx-2 d-none" id="logoutList">
+                    <a
+                      class="px-0 logoutDiv nav-link main-color"
+                      onclick="logOut()"
+                    >
+                      <i class="fa-solid fa-right-from-bracket"></i>
+                      <span class="me-1" id="logout">تسجيل الخروج</span>
+                    </a>
+                  </li>
+                  <li class="nav-item mx-2 d-block" id="loginList">
+                    <a
+                      class="px-0 logoutDiv nav-link main-color"
+                      href="login.html"
+                    >
+                      <i class="fa-solid fa-right-from-bracket"></i>
+                      <span class="me-1" id="login">تسجيل الدخول</span>
+                    </a>
+                  </li>
+                  <li class="language">
+                    <select class="language-select border-0 main-color">
+                      <option class="language-option" value="ar" id="arabic">
+                        العربية
+                      </option>
+                      <option class="language-option" value="en">
+                        English
+                      </option>
+                    </select>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start bookingDetails -->
+    <div
+      id="success-alert"
+      class="alert alert-success bg-success text-white position-fixed success-alert fs-5 z-2 d-none"
+    >
+      Booking Completed Successfully
+    </div>
+    <div class="bookingDetails pt-3 pm-2">
+      <div class="heading-dark" id="headd"></div>
+      <div class="container" id="car-section">
+        <div class="row top-row mt-5" id="car-section">
+          <div class="col-lg-6 col-md-10 swiper-container-wrapper"></div>
+          <div class="col-lg-6 infoo mt-3"></div>
+          <div class="row details rounded-2 mt-5 mb-3 py-3">
+            <div class="col-md-6">
+              <label for="Fname" class="mb-1 fw-bold" id="FirstName"
+                >الاسم :</label
+              >
+              <input
+                type="text"
+                id="Fname"
+                class="form-control mb-2"
+                required
+              />
+              <p id="fnameAlert" class="invalid-feedback">
+                يجب ان يحتوي علي 2 حروف علي الأقل
+              </p>
+
+              <!-- <label for="Lname" class="mb-1 fw-bold" id="lastName"
+                >الاسم الاخير:</label
+              >
+              <input
+                type="text"
+                id="Lname"
+                class="form-control mb-2"
+                required
+              />
+              <p id="lnameAlert" class="invalid-feedback">
+                يجب ان يحتوي علي 2 حروف علي الأقل
+              </p> -->
+
+              <!-- <label for="emailInput" class="mb-1 fw-bold" id="Email"
+                >البريد الالكتروني:</label
+              >
+              <input
+                type="email"
+                id="emailInput"
+                class="form-control mb-2"
+                required
+              /> -->
+              <!-- <p id="EmailAlert" class="invalid-feedback">name@example.com</p> -->
+
+              <label for="phone" class="mb-1 fw-bold" id="phone">الهاتف:</label>
+              <input
+                type="tel"
+                id="phoneInput"
+                class="form-control mb-2"
+                required
+              />
+              <p id="PhoneAlert" class="invalid-feedback">
+                علي سبيل المثال : 966541231235 +
+              </p> 
+              <label for="car" class="mb-1 fw-bold d-none" id="type">
+                نوع السيارة :</label
+              >
+              <input
+                type="text"
+                id="car"
+                disabled
+                value="BMW"
+                class="form-control mb-2 d-none"
+                required
+              />
+
+              <!-- <label for="Time" class="mb-1 fw-bold" id="Time">الوقت :</label>
+              <input
+                type="time"
+                class="form-control mb-2"
+                id="TimeInput"
+                required
+              /> -->
+              <label for="Date" class="mb-1 fw-bold" id="date">التاريخ :</label>
+              <input type="date" id="Date" class="form-control mb-2" required />
+              <!-- <label for="addersess" class="mb-1 fw-bold" id="addresss"
+                >العنوان :</label
+              >
+              <input
+                type="text"
+                id="addersesss"
+                class="form-control mb-2"
+                required
+              />
+              <p id="AddressAlert" class="invalid-feedback">ادخل عنوانك</p> -->
+              <!-- <label for="status" class="mb-1 fw-bold" id="pay">حالة الدفع :</label> 
+                            <input type="text" id="status" disabled value="غير مدفوع" class="form-control mb-2" required>  -->
+            </div>
+            <div class="col-md-6">
+              <label for="fPlace" class="mb-1 fw-bold" id="fplace"
+                >نقطه المغادرة:</label
+              >
+              <input
+                type="text"
+                id="fPlacee"
+                class="form-control mb-2"
+                required
+              />
+              <p id="fAddressAlert" class="invalid-feedback">ادخل عنوانك</p>
+              <label for="lPlace" class="mb-1 fw-bold" id="lplacee"
+                >نقطه الوصول:</label
+              >
+              <input
+                type="text"
+                id="lPlacee"
+                class="form-control mb-2"
+                required
+              />
+              <p id="lAddressAlert" class="d-none text-danger invalid-feedback">
+                ادخل عنوانك
+              </p>
+              <!-- <label for="num" class="mb-1 fw-bold" id="numPerson"
+                >عدد الاشخاص:</label
+              >
+              <input
+                type="number"
+                id="num"
+                class="form-control mb-2"
+                required
+              /> -->
+              <!-- <label for="datee" class="mb-1 fw-bold" id="returnDate"
+                >تاريخ العوده في حاله الذهاب و العوده:</label
+              >
+              <input type="date" id="datee" class="form-control mb-2" /> -->
+
+              <!-- <p id="returnDateAlert" class="invalid-feedback">
+                تاريخ العودة يجب أن يكون بعد تاريخ الإيجار
+              </p> -->
+              <label for="price" class="mb-1 fw-bold d-none" id="pricee"
+                >السعر :</label
+              >
+              <input
+                type="text"
+                id="price"
+                class="form-control mb-2 d-none"
+                disabled
+                value="3000"
+              />
+
+            </div>
+            <button
+              class="btn m-auto d-block bg-second-color mt-4 text-white fw-bold"
+              id="submitBtn"
+              onclick="completeBooking()"
+            >
+              تأكيد الحجز
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End bookingDetails -->
+
+      <!-- Start Footer -->
+      <div class="copyright bg-white py-2">
+        <div
+          class="Footer text-center p-3 d-flex justify-content-center gap-5 align-items-center"
+        >
+          <a class="navbar-brand m-0" href="index.html">
+            <img src="./Assets/logo/Logo.png" alt="Logo" style="width: 120px" />
+          </a>
+          <div class="d-flex flex-column">
+            <div class="social">
+              <a
+                class="mx-2 main-color fs-3"
+                href="https://www.facebook.com/profile.php?id=61562200177164&mibextid=ZbWKwL"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                class="mx-2 main-color fs-3"
+                href="https://www.instagram.com/saqr.almadina?igsh=MWV2emRtcm1wNHRkcw=="
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                class="mx-2 main-color fs-3"
+                href="https://x.com/SaqrAlmadina234?t=9Vs1iMIE2YG48rEUopqpBQ&s=09"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a
+                href="mailto: info@saqralmadina.com"
+                class="mx-2 main-color fs-3"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </div>
+            <p class="fs-6 second-color fw-bold">
+              <span id="footing">حقوق النشر محفوظه لدي</span>
+              <a href="https://wa.me/+966548720537" class="fw-bold second-color"
+                >IT.RENADMADI</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End Footer -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main1.js"></script>
+    <script src="js/authentication.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/transilations/car.js"></script>
+  </body>
+</html>
