@@ -1,1 +1,1 @@
-https://mohamedelrewiny.github.io/saqralmadina/
+https://saqralmadina.com/
